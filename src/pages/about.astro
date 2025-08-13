@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Datos de habilidades
+const skills = [
+  "Python", "SQL", "Power BI", "Excel", "R", "Tableau", 
+  "Machine Learning", "Data Visualization", "Statistical Analysis",
+  "ETL Processes", "Data Cleaning", "Predictive Modeling"
+];
+---
+
+<Layout title="Acerca de - Sebastián Vejar">
+  <section class="about">
+    <h1>Acerca de Mí</h1>
+    
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Sebastián Vejar</h2>
+        <h3>Analista de Datos</h3>
+        
+        <p>Soy un analista de datos apasionado por transformar información compleja en insights accionables. Con experiencia en el análisis de datos empresariales, me especializo en crear soluciones que ayuden a las organizaciones a tomar decisiones basadas en datos.</p>
+        
+        <p>Mi enfoque combina habilidades técnicas sólidas con una comprensión profunda de las necesidades empresariales, permitiéndome crear dashboards, reportes y análisis que realmente generen valor para los stakeholders.</p>
+        
+        <h3>Experiencia</h3>
+        <ul>
+          <li>Análisis de datos para empresas de retail y e-commerce</li>
+          <li>Desarrollo de dashboards ejecutivos en Power BI</li>
+          <li>Implementación de modelos predictivos</li>
+          <li>Automatización de reportes y procesos de datos</li>
+        </ul>
+      </div>
+      
+      <div class="skills-section">
+        <h3>Habilidades Técnicas</h3>
+        <div class="skills-grid">
+          {skills.map(skill => (
+            <div class="skill-item">{skill}</div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  
+  .about-text ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .about-text li {
+    padding: 0.5rem 0;
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills-section h3 {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    background: var(--color-primary);
+    color: var(--color-light);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .skill-item:hover {
+    background: var(--color-dark);
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

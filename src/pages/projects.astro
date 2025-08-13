@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Datos de los proyectos
+const projects = [
+  {
+    title: "Análisis de Ventas",
+    description: "Dashboard interactivo para análisis de ventas mensuales y tendencias.",
+    tags: ["Power BI", "SQL", "Excel"]
+  },
+  {
+    title: "Predicción de Demanda",
+    description: "Modelo predictivo para estimar la demanda de productos.",
+    tags: ["Python", "Machine Learning", "Pandas"]
+  },
+  {
+    title: "Reporte de KPIs",
+    description: "Reporte automatizado de indicadores clave de rendimiento.",
+    tags: ["Python", "Automation", "Reporting"]
+  },
+  {
+    title: "Análisis de Clientes",
+    description: "Segmentación y análisis de comportamiento de clientes.",
+    tags: ["R", "Tableau", "SQL"]
+  },
+  {
+    title: "Optimización de Inventario",
+    description: "Sistema de optimización de niveles de inventario.",
+    tags: ["Python", "Optimization", "Excel"]
+  },
+  {
+    title: "Dashboard Ejecutivo",
+    description: "Dashboard en tiempo real para métricas empresariales.",
+    tags: ["Power BI", "DAX", "SQL Server"]
+  }
+];
+---
+
+<Layout title="Proyectos - Sebastián Vejar">
+  <section class="projects">
+    <h1>Mis Proyectos</h1>
+    <p>Aquí puedes ver algunos de los proyectos más destacados en los que he trabajado como analista de datos.</p>
+    
+    <div class="projects-grid">
+      {projects.map(project => (
+        <div class="project-card">
+          <h3>{project.title}</h3>
+          <p>{project.description}</p>
+          <div class="project-tags">
+            {project.tags.map(tag => (
+              <span>{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Layout>
