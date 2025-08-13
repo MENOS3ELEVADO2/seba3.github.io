@@ -1,3 +1,6 @@
+# seba3.github.io
+Portafolio profesional para mostrar mis habilidades y experiencia en búsqueda de nuevas oportunidades laborales.
+
 # Portafolio de Sebastián Vejar - Astro
 
 Un portafolio moderno y profesional construido con Astro para mostrar proyectos y habilidades como Analista de Datos.
