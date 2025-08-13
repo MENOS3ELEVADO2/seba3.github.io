@@ -2,10 +2,10 @@
   "name": "seba95-portfolio",
   "type": "module",
   "version": "0.0.1",
-"scripts": {
-  "build": "astro build",
-  "preview": "astro preview",
-  "deploy": "gh-pages -d dist"
+  "scripts": {
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "astro": "^4.0.0"
