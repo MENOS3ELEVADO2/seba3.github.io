@@ -5,6 +5,7 @@
   "scripts": {
     "build": "astro build",
     "preview": "astro preview",
+    "dev": "astro dev",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
